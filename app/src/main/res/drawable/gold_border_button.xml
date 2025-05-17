@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Transparent Background -->
+    <solid android:color="@android:color/transparent" />
+
+    <!-- Gold Border -->
+    <stroke
+        android:color="#FF9800"
+        android:width="3dp"
+        />
+
+    <!-- Rounded Corners -->
+    <corners android:radius="50dp" />
+
+    <!-- Optional Padding to make it more spacious -->
+    <padding
+        android:left="16dp"
+        android:top="8dp"
+        android:right="16dp"
+        android:bottom="8dp" />
+</shape>

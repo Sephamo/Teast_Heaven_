@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/chef_white_boarder"
+    android:elevation="4dp"
+    android:layout_marginHorizontal="12dp"
+    android:clipToPadding="false"
+    android:layout_marginTop="8dp">
+
+    <!-- Table and Order Number -->
+    <TextView
+        android:id="@+id/tvTableOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Table 3 - Order #1002"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <!-- Time Ordered -->
+    <TextView
+        android:id="@+id/tvTimeOrdered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:34 PM"
+        android:textColor="#BBBBBB"
+        android:layout_marginTop="4dp" />
+
+    <!-- Ordered Items -->
+    <TextView
+        android:id="@+id/tvItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item: Pizza\nCoke"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="8dp" />
+
+    <!-- Customer Notes -->
+    <TextView
+        android:id="@+id/tvNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Note: No onions, allergy to nuts"
+        android:textColor="#FF8888"
+        android:layout_marginTop="6dp"
+        android:visibility="visible" />
+
+    <!-- Status Spinner -->
+    <Spinner
+        android:id="@+id/spinnerStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:popupBackground="#ffffff"
+        android:entries="@array/order_status_options" />
+
+    <!-- Preparation Time -->
+    <TextView
+        android:id="@+id/tvPreparationTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preparation Time: 15 minutes"
+        android:textColor="#AAAAAA"
+        android:layout_marginTop="8dp" />
+
+    <!-- Update Button -->
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Status"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#000000" />
+</LinearLayout>

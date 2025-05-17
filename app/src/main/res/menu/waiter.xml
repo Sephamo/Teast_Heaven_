@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tables"
+        android:icon="@drawable/tables"
+        android:title="Tables" />
+    <item
+        android:id="@+id/order_placement"
+        android:icon="@drawable/dish"
+        android:title="Orders" />
+    <item
+        android:id="@+id/active_orders"
+        android:icon="@drawable/activeorder"
+        android:title="Updates" />
+    <item
+        android:id="@+id/oder_status_update"
+        android:icon="@drawable/status"
+        android:title="Status" />
+</menu>

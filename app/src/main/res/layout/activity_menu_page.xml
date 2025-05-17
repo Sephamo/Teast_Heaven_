@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".ManuPage">
+
+    <!-- Scrollable Content -->
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="50dp"
+        android:layout_above="@id/bottomNavigationView">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/menu_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Hungry? Dive into our delicious menu"
+            android:textColor="#FF9800"
+            android:textSize="20sp"
+            android:textStyle="italic|bold"
+            android:padding="16dp" />
+
+        <!-- Search Bar -->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_searchview_background"
+            android:padding="10dp"
+            app:iconifiedByDefault="false"
+            app:queryHint="Search for menu..." />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp">
+
+                <!-- Pizza Section -->
+                <TextView
+                    android:id="@+id/tvPizza"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PIZZA"
+                    android:textColor="#FF9800"
+                    android:textSize="28sp"
+                    android:textStyle="bold|italic"
+                    android:layout_marginBottom="12dp" />
+
+                <GridView
+                    android:id="@+id/gridPizza"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:horizontalSpacing="12dp"
+                    android:verticalSpacing="12dp"
+                    android:layout_marginBottom="24dp" />
+
+                <GridView
+                    android:id="@+id/gridPizz2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:horizontalSpacing="12dp"
+                    android:verticalSpacing="12dp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Burger Section -->
+                <TextView
+                    android:id="@+id/tvBurger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BURGER"
+                    android:textColor="#FF9800"
+                    android:textSize="28sp"
+                    android:textStyle="bold|italic"
+                    android:layout_marginBottom="12dp" />
+
+                <GridView
+                    android:id="@+id/gridBurgers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:horizontalSpacing="12dp"
+                    android:verticalSpacing="12dp"
+                    android:layout_marginBottom="24dp" />
+
+                <GridView
+                    android:id="@+id/gridBurger2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:horizontalSpacing="12dp"
+                    android:verticalSpacing="12dp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Beef Section -->
+                <TextView
+                    android:id="@+id/tvBeef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BEEF"
+                    android:textColor="#FF9800"
+                    android:textSize="28sp"
+                    android:textStyle="bold|italic"
+                    android:layout_marginBottom="12dp" />
+
+                <GridView
+                    android:id="@+id/gridBeef"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:horizontalSpacing="12dp"
+                    android:verticalSpacing="12dp"
+                    android:layout_marginBottom="24dp" />
+
+                <GridView
+                    android:id="@+id/gridBeef2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:horizontalSpacing="12dp"
+                    android:verticalSpacing="12dp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Chicken Section -->
+                <TextView
+                    android:id="@+id/tvChicken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CHICKEN"
+                    android:textColor="#FF9800"
+                    android:textSize="28sp"
+                    android:textStyle="bold|italic"
+                    android:layout_marginBottom="12dp" />
+
+                <GridView
+                    android:id="@+id/gridChicken"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:horizontalSpacing="12dp"
+                    android:verticalSpacing="12dp"
+                    android:layout_marginBottom="24dp" />
+
+                <GridView
+                    android:id="@+id/gridChicken2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:horizontalSpacing="12dp"
+                    android:verticalSpacing="12dp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Dessert Section -->
+                <TextView
+                    android:id="@+id/tvDesert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DESSERT"
+                    android:textColor="#FF9800"
+                    android:textSize="28sp"
+                    android:textStyle="bold|italic"
+                    android:layout_marginBottom="12dp" />
+
+                <GridView
+                    android:id="@+id/gridDesert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:horizontalSpacing="12dp"
+                    android:verticalSpacing="12dp"
+                    android:layout_marginBottom="24dp" />
+
+                <GridView
+                    android:id="@+id/gridDesert2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:horizontalSpacing="12dp"
+                    android:verticalSpacing="12dp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Drinks Section -->
+                <TextView
+                    android:id="@+id/tvDrinks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DRINKS"
+                    android:textColor="#FF9800"
+                    android:textSize="28sp"
+                    android:textStyle="bold|italic"
+                    android:layout_marginBottom="12dp"/>
+
+                <GridView
+                    android:id="@+id/gridDrinks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:horizontalSpacing="12dp"
+                    android:verticalSpacing="12dp"
+                    android:layout_marginBottom="20dp" />
+
+                <GridView
+                    android:id="@+id/gridDrinks2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:horizontalSpacing="12dp"
+                    android:verticalSpacing="20dp"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <!-- Fixed Footer -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        app:itemTextColor="#FF9800"
+        app:itemIconTint="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:itemHorizontalTranslationEnabled="true"
+        app:menu="@menu/menu_main" />
+</RelativeLayout>
+

@@ -1,0 +1,54 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Chef Interface Heading -->
+        <TextView
+            android:id="@+id/tvChefInterface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chef Interface"
+            android:textColor="#FF9800"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- White Border Box using drawable -->
+        <TextView
+            android:id="@+id/tvKitchenDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="Kitchen Dashboard"
+            android:textColor="#FF9800"
+            android:textSize="18sp"
+            android:background="@drawable/chef_white_boarder"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/EmptyState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No active orders"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"/>
+
+        <!-- RecyclerView for displaying orders -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerOrders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

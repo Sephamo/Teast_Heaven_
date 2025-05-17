@@ -1,0 +1,185 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:fitsSystemWindows="true">
+
+    ```
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollViewContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:paddingBottom="70dp"> <!-- Extra padding so content doesn't overlap with nav -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Order details"
+                android:textColor="#FF9800"
+                android:textStyle="bold|italic"
+                android:textSize="20sp"/>
+
+            <!-- Table & Notes Section -->
+            <LinearLayout
+                android:background="@drawable/border_inner_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Table Information\nSpecial Notes"
+                    android:textColor="#FF9800"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <!-- Table Number Input -->
+                <EditText
+                    android:id="@+id/txtTableNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Table Number"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#AAAAAA"
+                    android:inputType="number"
+                    android:layout_marginTop="8dp"
+                    android:textSize="20sp"/>
+
+                <!-- Notes Input -->
+                <EditText
+                    android:id="@+id/txtNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Special Notes (Optional)"
+                    android:textColor="@color/white"
+                    android:textColorHint="#AAAAAA"
+                    android:layout_marginTop="16dp"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <!-- Category Buttons Section -->
+            <LinearLayout
+                android:background="@drawable/border_inner_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:weightSum="6"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please enter the item code"
+                    android:textStyle="bold|italic"
+                    android:textSize="28sp"
+                    android:textColor="#FF9800"/>
+            </LinearLayout>
+
+            <!-- Item Selection Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_inner_line"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/txtItemSelection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Item Code.."
+                    android:textColor="#FF9800"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/txtSelectedItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#AAAAAA"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="5"
+                    android:ellipsize="end"
+                    android:textSize="20sp"/>
+
+                <LinearLayout
+                    android:id="@+id/itemListContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"/>
+
+                <Button
+                    android:id="@+id/btnAddToOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add to Order"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#2196F3"
+                    android:padding="12dp"
+                    android:layout_marginTop="16dp"/>
+            </LinearLayout>
+
+            <!-- Total Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_inner_line"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total: R0.00"
+                    android:textColor="#FF9800"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Send to Kitchen Button -->
+            <Button
+                android:id="@+id/btnSendToKitchen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send to Kitchen"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#2196F3"
+                android:padding="12dp"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="labeled"
+        android:background="#222222"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="#FF9800"
+        app:menu="@menu/waiter"/>
+    ```
+
+</RelativeLayout>
+

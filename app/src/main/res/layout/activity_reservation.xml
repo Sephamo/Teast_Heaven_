@@ -1,0 +1,287 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Reservation Heading -->
+            <TextView
+                android:id="@+id/tvReservationHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:paddingTop="30dp"
+                android:gravity="center"
+                android:text="Set the Date, We’ll Set the
+                Table"
+                android:textColor="#FF9800"
+                android:textSize="28sp"
+                android:textStyle="bold|italic" />
+
+            <!-- Party Size Label -->
+            <TextView
+                android:id="@+id/PartySize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Table For How Many?"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                android:textColor="#FF9800"
+                android:layout_marginTop="15dp" />
+
+            <LinearLayout
+                android:background="@drawable/border_white"
+                android:id="@+id/layoutPartySize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp">
+
+                <!-- Party size buttons -->
+                <Button
+                    android:id="@+id/btnParty1"
+                    android:layout_width="63dp"
+                    android:layout_height="60dp"
+                    android:text="1"
+                    android:textSize="18sp"
+                    android:backgroundTint="#FFFFFF"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_margin="4dp" />
+
+                <Button
+                    android:id="@+id/btnParty2"
+                    android:layout_width="63dp"
+                    android:layout_height="60dp"
+                    android:text="2"
+                    android:textSize="18sp"
+                    android:backgroundTint="#FFFFFF"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_margin="4dp" />
+
+                <Button
+                    android:id="@+id/btnParty3"
+                    android:layout_width="63dp"
+                    android:layout_height="60dp"
+                    android:textSize="18sp"
+                    android:text="3"
+                    android:backgroundTint="#FFFFFF"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_margin="4dp" />
+
+                <Button
+                    android:id="@+id/btnParty4"
+                    android:layout_width="64dp"
+                    android:layout_height="60dp"
+                    android:text="4"
+                    android:textSize="18sp"
+                    android:backgroundTint="#FFFFFF"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_margin="4dp" />
+
+                <Button
+                    android:id="@+id/btnParty5plus"
+                    android:layout_width="67dp"
+                    android:layout_height="60dp"
+                    android:text="5+"
+                    android:textSize="16sp"
+                    android:backgroundTint="#FFFFFF"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_margin="4dp" />
+            </LinearLayout>
+
+            <!-- Calendar Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border_white"
+                android:padding="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:id="@+id/tvSelectDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Special Date"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"
+                    android:textColor="#FF9800"
+                    android:layout_marginBottom="25dp" />
+
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:textColorHint="#AAAAAA"
+                    android:focusedMonthDateColor="#FFFFFF"
+                    android:unfocusedMonthDateColor="#888888"
+                    android:selectedWeekBackgroundColor="#2196F3"
+                    android:weekSeparatorLineColor="#2196F3"
+                    android:dateTextAppearance="@style/CalendarDateText" />
+            </LinearLayout>
+
+            <!-- Time Slot -->
+            <TextView
+                android:id="@+id/tvTimeSlots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What Time Works for You?"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                android:textColor="#FF9800"
+                android:layout_marginBottom="12dp" />
+
+            <GridLayout
+                android:id="@+id/layoutTimeButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_white"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false"
+                android:useDefaultMargins="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:id="@+id/btnTime5"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:text="09:00 - 14:00"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnTime6"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:text="14:00 - 18:30"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnTime7"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:text="18:30 - 20:00"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnTime8"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:text="20:00 - 23:30"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </GridLayout>
+
+            <!-- Legend Section -->
+            <LinearLayout
+                android:id="@+id/layoutLegend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp">
+
+                <Button
+                    android:id="@+id/BtnAvailable"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="#2196F3"
+                    android:layout_marginEnd="4dp"
+                    android:enabled="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Available  "
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp" />
+
+                <Button
+                    android:id="@+id/BtnNotAvailable"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="#FF0000"
+                    android:layout_marginEnd="4dp"
+                    android:enabled="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Available"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Confirm Reservation Button -->
+            <Button
+                android:id="@+id/btnConfirmReservation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirm Reservation"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:padding="12dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        app:itemTextColor="#FF9800"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/white"
+        app:itemTextAppearanceInactive="@menu/menu_main"
+        app:itemHorizontalTranslationEnabled="true"
+        app:menu="@menu/menu_main" />
+</LinearLayout>
+
+

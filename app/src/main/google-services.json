@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "807222243385",
+    "project_id": "the-garden-of-eat-n",
+    "storage_bucket": "the-garden-of-eat-n.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807222243385:android:39d0d6c4669377c418dde8",
+        "android_client_info": {
+          "package_name": "com.thegarden.oeatn2025"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoJc5CfetBu_sgyYeuxY9RiAN5E8rCzt0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

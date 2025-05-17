@@ -1,0 +1,231 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Category Buttons Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:weightSum="6"
+            android:gravity="center">
+
+            <!-- Pizza Category Button -->
+            <Button
+                android:id="@+id/btnPizza"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pizza"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:backgroundTint="#2196F3"
+                android:padding="12dp"
+                android:textAllCaps="false" />
+
+            <!-- Drinks Category Button -->
+            <Button
+                android:id="@+id/btnDrinks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Drinks"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:backgroundTint="#2196F3"
+                android:padding="12dp"
+                android:textAllCaps="false" />
+
+            <!-- Pasta Category Button -->
+            <Button
+                android:id="@+id/btnPasta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pasta"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:backgroundTint="#2196F3"
+                android:padding="12dp"
+                android:textAllCaps="false" />
+
+            <!-- Burger Category Button -->
+            <Button
+                android:id="@+id/btnBurger"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Burger"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:backgroundTint="#2196F3"
+                android:padding="12dp"
+                android:textAllCaps="false" />
+
+            <!-- Salad Category Button -->
+            <Button
+                android:id="@+id/btnSalad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Salad"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:backgroundTint="#2196F3"
+                android:padding="12dp"
+                android:textAllCaps="false" />
+
+            <!-- Dessert Category Button -->
+            <Button
+                android:id="@+id/btnDessert"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dessert"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:backgroundTint="#2196F3"
+                android:padding="12dp"
+                android:textAllCaps="false" />
+
+            <!-- Sandwich Category Button -->
+            <Button
+                android:id="@+id/btnSandwich"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sandwich"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:backgroundTint="#2196F3"
+                android:padding="12dp"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <!-- Item Selection Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_inner_line"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="16dp">
+
+            <!-- Item Selection Section (List of items for the selected category) -->
+            <TextView
+                android:id="@+id/txtItemSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Selection"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <!-- TextView to show selected items -->
+            <TextView
+                android:id="@+id/txtSelectedItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No items selected yet."
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp"
+                android:maxLines="5"
+                android:ellipsize="end"
+                android:textSize="16sp" />
+
+            <!-- Placeholder for items (add dynamically based on category selection) -->
+            <LinearLayout
+                android:id="@+id/itemListContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <!-- Items will be added here dynamically -->
+            </LinearLayout>
+
+            <!-- Add to Order Button -->
+            <Button
+                android:id="@+id/btnAddToOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add to Order"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#4CAF50"
+                android:padding="12dp"
+                android:layout_marginTop="16dp" />
+
+            <!-- Forward/Back Buttons for navigation -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#2196F3"
+                    android:padding="12dp" />
+
+                <Button
+                    android:id="@+id/btnForward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forward"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#2196F3"
+                    android:padding="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Total Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_inner_line"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total: $0.00"
+                android:id="@+id/txtTotal"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Send to Kitchen Button -->
+        <Button
+            android:id="@+id/btnSendToKitchen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send to Kitchen"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF5722"
+            android:padding="12dp"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+

@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.thegardenofeatn.MainActivity">
+ <!--   <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" /> -->
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/home"/>
+
+    <item
+        android:id="@+id/nav_menu"
+        android:title="Menu"
+        android:icon="@drawable/menu"/>
+    <item
+        android:id="@+id/nav_reservation"
+        android:title="Reservation"
+        android:icon="@drawable/calendar"/>
+    <item
+        android:id="@+id/nav_review"
+        android:title="Feedback"
+        android:icon="@drawable/review"/>
+</menu>
