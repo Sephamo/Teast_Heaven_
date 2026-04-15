@@ -13,7 +13,8 @@ This mobile app is a **Restaurant Management System**, designed to help streamli
 - Reservation system
 
 ##  Team Members
-
+maafrica solomon
+pasha sephamo 
 This project was developed collaboratively by a team of six students, including myself.
 
 ##  Technologies Used
