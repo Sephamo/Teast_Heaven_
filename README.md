@@ -14,7 +14,7 @@ This mobile app is a **Restaurant Management System**, designed to help streamli
 
 ##  Team Members
 maafrica solomon
-pasha sephamo 
+Phasha sephamo 
 This project was developed collaboratively by a team of six students, including myself.
 
 ##  Technologies Used
